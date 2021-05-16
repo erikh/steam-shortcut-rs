@@ -172,7 +172,7 @@ pub mod parser {
 
                     let mut i = 0;
                     for x in handle.take(4) {
-                        target |= (x? as u32) << i;
+                        target |= (x? as u32) << (i * 8);
                         i += 1;
                     }
 
